@@ -2,7 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* @keyframes animating {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 20px;
+  }
+}
+
+@layer components {
+  .stripe {
+    background-image: linear-gradient(
+      -45deg,
+      black 5%,
+      transparent 5% 45%,
+      black 45% 55%,
+      transparent 55% 95%,
+      black 95%
+    );
+    background-size: 20px 20px;
+    isolation: isolate;
+    animation: 1s linear 0s infinite normal animating;
+  }
+}
+
+@layer utilities {
+  .stripe-reverse {
+    animation: 1s linear 0s infinite reverse animating;
+  }
+} */
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +55,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
