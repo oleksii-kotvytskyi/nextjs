@@ -6,6 +6,7 @@ specifiers:
   '@fortawesome/free-solid-svg-icons': ^6.4.0
   '@fortawesome/react-fontawesome': ^0.2.0
   '@hookform/resolvers': ^3.1.1
+  '@prisma/client': ^5.1.0
   '@radix-ui/react-dialog': ^1.0.4
   '@radix-ui/react-label': ^2.0.2
   '@radix-ui/react-slot': ^1.0.2
@@ -39,6 +40,7 @@ dependencies:
   '@fortawesome/free-solid-svg-icons': 6.4.0
   '@fortawesome/react-fontawesome': 0.2.0_tumfstpptabomqiydababgzl3q
   '@hookform/resolvers': 3.1.1_react-hook-form@7.45.2
+  '@prisma/client': 5.1.0_prisma@5.1.0
   '@radix-ui/react-dialog': 1.0.4_uxzdvyigevn6hawdlr7isnvh64
   '@radix-ui/react-label': 2.0.2_uxzdvyigevn6hawdlr7isnvh64
   '@radix-ui/react-slot': 1.0.2_i73ekzlbntu7jol6ph2fvy4mga
@@ -436,10 +438,27 @@ packages:
       tslib: 2.6.0
     dev: false
 
+  /@prisma/client/5.1.0_prisma@5.1.0:
+    resolution: {integrity: sha512-aIxuXlH3p3Vy91buodQhYgAD9m0yuxJzpXMhc1ejQ/WN3pNNWzBA0iDcBObLq8DMdszcXmoLAk3hiRq/ZwBsOw==}
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 5.1.0-28.a9b7003df90aa623086e4d6f4e43c72468e6339b
+      prisma: 5.1.0
+    dev: false
+
+  /@prisma/engines-version/5.1.0-28.a9b7003df90aa623086e4d6f4e43c72468e6339b:
+    resolution: {integrity: sha512-jTwE2oy1yjICmTfnCR0ASIpuMZXZ18sUzQXB7V0RMbrM9OlcmbUwXPuYhnxXuWN8XwRmujeIhsXs/Zeh+fjPOQ==}
+    dev: false
+
   /@prisma/engines/5.1.0:
     resolution: {integrity: sha512-HqaFsnPmZOdMWkPq6tT2eTVTQyaAXEDdKszcZ4yc7DGMBIYRP6j/zAJTtZUG9SsMV8FaucdL5vRyxY/p5Ni28g==}
     requiresBuild: true
-    dev: true
 
   /@radix-ui/primitive/1.0.1:
     resolution: {integrity: sha512-yQ8oGX2GVsEYMWGxcovu1uGWPCxV5BFfeeYxqPmuAzUyLT9qmaMXSAhXpb0WrspIeqYzdJpkh2vHModJPgRIaw==}
@@ -2831,7 +2850,6 @@ packages:
     requiresBuild: true
     dependencies:
       '@prisma/engines': 5.1.0
-    dev: true
 
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
