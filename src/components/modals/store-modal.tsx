@@ -36,12 +36,15 @@ export const StoreModal = () => {
     },
   });
 
+  const onCloseForm = () => {
+    form.reset();
+    onClose();
+  };
+
   const onSubmit = async (values: FormValuesType) => {
     try {
       setLoading(true);
-
       const res = await axios.post("/api/stores", values);
-
       window.location.assign(`/${res.data.id}`);
     } catch (error) {
       toast.error(String(error));
@@ -55,7 +58,7 @@ export const StoreModal = () => {
       title="Create store"
       description="Add a new store to manage products and categories"
       isOpen={isOpen}
-      onClose={onClose}
+      onClose={onCloseForm}
     >
       <div>
         <div className="space-y-4 py-2 pb-4">
@@ -84,10 +87,8 @@ export const StoreModal = () => {
                 <Button
                   disabled={loading}
                   variant="outline"
-                  onClick={() => {
-                    form.reset();
-                    onClose();
-                  }}
+                  type="reset"
+                  onClick={onCloseForm}
                 >
                   Cancel
                 </Button>

@@ -1,6 +1,7 @@
 import prismadb from "@/lib/prisma-db";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
+import NavBar from "@/components/navbar";
 
 const DashboardLayout = async ({
   children,
@@ -28,7 +29,7 @@ const DashboardLayout = async ({
 
   return (
     <>
-      <div>Navbar</div>
+      <NavBar />
       {children}
     </>
   );
