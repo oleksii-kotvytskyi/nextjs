@@ -11,3 +11,8 @@ export * from "./heading";
 export * from "./popover";
 export * from "./separator";
 export * from "./image-upload";
+export * from "./data-table";
+export * from "./table";
+export * from "./dropdown-menu";
+export * from "./api-list";
+export * from "./api-alert";
