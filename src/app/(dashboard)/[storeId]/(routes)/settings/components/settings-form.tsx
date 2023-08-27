@@ -28,7 +28,6 @@ import { useOrigin } from "@/hooks/user-origin";
 
 interface SettingsFormProps {
   initialData: Store;
-  [key: string]: any;
 }
 
 const formSchema = z.object({
@@ -40,6 +39,7 @@ type SettingsFormValues = z.infer<typeof formSchema>;
 const SettingsForm = ({ initialData }: SettingsFormProps) => {
   const params = useParams();
   const router = useRouter();
+  // TODO, check hydration error
   const origin = useOrigin();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
