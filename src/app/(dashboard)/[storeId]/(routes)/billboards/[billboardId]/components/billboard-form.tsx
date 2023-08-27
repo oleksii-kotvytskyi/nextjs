@@ -24,8 +24,6 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useParams, useRouter } from "next/navigation";
 import AlertModal from "@/components/modals/alert-modal";
-// import { ApiAlert } from  "@/components/ui/api-alert";
-import { useOrigin } from "@/hooks/user-origin";
 
 const formSchema = z.object({
   label: z.string().min(1),
@@ -41,7 +39,6 @@ interface BillboardsFormProps {
 const BillboardsForm = ({ initialData }: BillboardsFormProps) => {
   const params = useParams();
   const router = useRouter();
-  const origin = useOrigin();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -87,6 +84,7 @@ const BillboardsForm = ({ initialData }: BillboardsFormProps) => {
         router.refresh();
       } else {
         await axios.post(`/api/${params.storeId}/billboards`, data);
+        router.refresh();
         router.push(`/${params.storeId}/billboards`);
       }
 
