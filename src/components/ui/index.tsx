@@ -10,3 +10,4 @@ export * from "./command";
 export * from "./heading";
 export * from "./popover";
 export * from "./separator";
+export * from "./image-upload";
