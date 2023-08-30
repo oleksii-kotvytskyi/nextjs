@@ -123,7 +123,7 @@ const SettingsForm = ({ initialData }: SettingsFormProps) => {
               }}
             />
           </div>
-          <Button disabled={loading} type="submit">
+          <Button disabled={loading || !form.formState.isDirty} type="submit">
             Save changes
           </Button>
         </form>
