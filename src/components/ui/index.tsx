@@ -17,3 +17,4 @@ export * from "./dropdown-menu";
 export * from "./api-list";
 export * from "./api-alert";
 export * from "./select";
+export * from "./checkbox";

@@ -5,19 +5,19 @@ import { ImagePlus, Trash } from "lucide-react";
 import Image from "next/image";
 import { CldUploadWidget } from "next-cloudinary";
 
-interface ImageUploadProps {
+interface ImageUploadProps<T> {
   disabled?: boolean;
-  onChange: (value: string) => void;
-  onRemove: (value: string) => void;
-  value: string[];
+  onChange: (value: T) => void;
+  onRemove: (value: T) => void;
+  value: T[];
 }
 
-export const ImageUpload = ({
+export const ImageUpload = <T extends string>({
   disabled,
   onChange,
   onRemove,
   value,
-}: ImageUploadProps) => {
+}: ImageUploadProps<T>) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
