@@ -67,6 +67,7 @@ const CategoryForm = ({ initialData, billboards }: CategoryFormProps) => {
         `/api/${params.storeId}/categories/${params.categoryId}`
       );
       router.push(`/${params.storeId}/categories`);
+      router.refresh();
       toast.success("Category deleted.");
     } catch (error) {
       toast.error(
