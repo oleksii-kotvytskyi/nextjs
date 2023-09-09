@@ -34,6 +34,7 @@ specifiers:
   lucide-react: ^0.263.1
   next: 13.4.9
   next-cloudinary: ^4.18.1
+  next-themes: ^0.2.1
   postcss: 8.4.25
   prisma: ^5.1.0
   prop-types: ^15.8.1
@@ -82,6 +83,7 @@ dependencies:
   lucide-react: 0.263.1_react@18.2.0
   next: 13.4.9_biqbaboplfbrettd7655fr4n2y
   next-cloudinary: 4.18.1_next@13.4.9+react@18.2.0
+  next-themes: 0.2.1_hyjx7svporfhadhuakm5xolhha
   postcss: 8.4.25
   prop-types: 15.8.1
   react: 18.2.0
@@ -3416,6 +3418,18 @@ packages:
       '@cloudinary-util/util': 2.2.1
       next: 13.4.9_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
+    dev: false
+
+  /next-themes/0.2.1_hyjx7svporfhadhuakm5xolhha:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 13.4.9_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/13.4.9_biqbaboplfbrettd7655fr4n2y:
