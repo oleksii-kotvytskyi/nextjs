@@ -40,6 +40,7 @@ specifiers:
   react-dom: 18.2.0
   react-hook-form: ^7.45.2
   react-hot-toast: ^2.4.1
+  stripe: ^13.5.0
   tailwind-merge: ^1.14.0
   tailwindcss: 3.3.2
   tailwindcss-animate: ^1.0.6
@@ -84,6 +85,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.45.2_react@18.2.0
   react-hot-toast: 2.4.1_s7mghcr6idhb4d5ook54gl4n44
+  stripe: 13.5.0
   tailwind-merge: 1.14.0
   tailwindcss: 3.3.2
   tailwindcss-animate: 1.0.6_tailwindcss@3.3.2
@@ -3639,6 +3641,13 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: false
 
+  /qs/6.11.2:
+    resolution: {integrity: sha512-tDNIz22aBzCDxLtVH++VnTfzxlfeK5CbqohpSqpJgj1Wg/cQbStNAz3NuqCs5vV+pjBsK4x4pN9HlVh7rcYRiA==}
+    engines: {node: '>=0.6'}
+    dependencies:
+      side-channel: 1.0.4
+    dev: false
+
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -3992,6 +4001,14 @@ packages:
   /strip-json-comments/3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
+    dev: false
+
+  /stripe/13.5.0:
+    resolution: {integrity: sha512-odGQbvkDVxR7ldxXth7kWaUv6M31bsPMYKCBR8oIIRDoiR4MfxWaLdz5h7QQDsGtelZugqx7AEVoC6twST+0VQ==}
+    engines: {node: '>=12.*'}
+    dependencies:
+      '@types/node': 20.4.2
+      qs: 6.11.2
     dev: false
 
   /styled-jsx/5.1.1_react@18.2.0:
