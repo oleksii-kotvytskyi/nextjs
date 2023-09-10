@@ -13,7 +13,6 @@ import {
   FormLabel,
   FormMessage,
   Input,
-  ImageUpload,
   Heading,
   Separator,
 } from "@/components/ui";
@@ -36,7 +35,7 @@ interface SizesFormProps {
   initialData: Size | null;
 }
 
-const SizesFormReview = ({ initialData }: SizesFormProps) => {
+const SizesForm = ({ initialData }: SizesFormProps) => {
   const params = useParams();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -73,6 +72,7 @@ const SizesFormReview = ({ initialData }: SizesFormProps) => {
   const onSubmit = async (data: SizesFormValues) => {
     try {
       setLoading(true);
+      // TODO, move to react-query
       if (initialData) {
         await axios.patch(
           `/api/${params.storeId}/sizes/${params.sizeId}`,
@@ -175,4 +175,4 @@ const SizesFormReview = ({ initialData }: SizesFormProps) => {
   );
 };
 
-export default SizesFormReview;
+export default SizesForm;

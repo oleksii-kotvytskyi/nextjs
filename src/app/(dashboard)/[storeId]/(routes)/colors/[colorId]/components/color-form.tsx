@@ -38,7 +38,7 @@ interface ColorsFormProps {
   initialData: Color | null;
 }
 
-const ColorsFormReview = ({ initialData }: ColorsFormProps) => {
+const ColorsForm = ({ initialData }: ColorsFormProps) => {
   const params = useParams();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -60,6 +60,7 @@ const ColorsFormReview = ({ initialData }: ColorsFormProps) => {
   const onDelete = async () => {
     try {
       setLoading(true);
+      // TODO
       await axios.delete(`/api/${params.storeId}/colors/${params.colorId}`);
       router.push(`/${params.storeId}/colors`);
       router.refresh();
@@ -184,4 +185,4 @@ const ColorsFormReview = ({ initialData }: ColorsFormProps) => {
   );
 };
 
-export default ColorsFormReview;
+export default ColorsForm;

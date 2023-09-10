@@ -5,6 +5,7 @@ import { CategoryClient } from "./components/client";
 import { CategoryColumn } from "./components/columns";
 
 const Categories = async ({ params }: { params: { storeId: string } }) => {
+  // TODO, move request to db to separate component and add Loading state
   const categories = await prismadb.category.findMany({
     where: { storeId: params.storeId },
     include: {

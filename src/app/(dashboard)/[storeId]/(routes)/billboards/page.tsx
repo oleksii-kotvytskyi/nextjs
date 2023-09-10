@@ -5,6 +5,7 @@ import { BillboardClient } from "./components/client";
 import { BillboardColumn } from "./components/columns";
 
 const Billboards = async ({ params }: { params: { storeId: string } }) => {
+  // TODO, move request to db to separate component and add Loading state
   const billboards = await prismadb.billboard.findMany({
     where: { storeId: params.storeId },
     orderBy: {
