@@ -36,7 +36,7 @@ interface SizesFormProps {
   initialData: Size | null;
 }
 
-const SizesForm = ({ initialData }: SizesFormProps) => {
+const SizesFormReview = ({ initialData }: SizesFormProps) => {
   const params = useParams();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -175,4 +175,4 @@ const SizesForm = ({ initialData }: SizesFormProps) => {
   );
 };
 
-export default SizesForm;
+export default SizesFormReview;

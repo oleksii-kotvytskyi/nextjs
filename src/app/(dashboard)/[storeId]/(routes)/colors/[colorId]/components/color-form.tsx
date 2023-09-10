@@ -38,7 +38,7 @@ interface ColorsFormProps {
   initialData: Color | null;
 }
 
-const ColorsForm = ({ initialData }: ColorsFormProps) => {
+const ColorsFormReview = ({ initialData }: ColorsFormProps) => {
   const params = useParams();
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -184,4 +184,4 @@ const ColorsForm = ({ initialData }: ColorsFormProps) => {
   );
 };
 
-export default ColorsForm;
+export default ColorsFormReview;
