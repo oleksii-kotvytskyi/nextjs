@@ -5,6 +5,7 @@ import { SizesClient } from "./components/client";
 import { SizeColumn } from "./components/columns";
 
 const SizesPage = async ({ params }: { params: { storeId: string } }) => {
+  // TODO, move request to db to separate component and add Loading state
   const sizes = await prismadb.size.findMany({
     where: { storeId: params.storeId },
     orderBy: {

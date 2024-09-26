@@ -13,7 +13,6 @@ import {
   FormLabel,
   FormMessage,
   Input,
-  ImageUpload,
   Heading,
   Separator,
 } from "@/components/ui";
@@ -73,6 +72,7 @@ const SizesForm = ({ initialData }: SizesFormProps) => {
   const onSubmit = async (data: SizesFormValues) => {
     try {
       setLoading(true);
+      // TODO, move to react-query
       if (initialData) {
         await axios.patch(
           `/api/${params.storeId}/sizes/${params.sizeId}`,

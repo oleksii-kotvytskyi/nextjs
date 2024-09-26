@@ -6,6 +6,7 @@ import { OrderColumn } from "./components/columns";
 import { formatter } from "@/lib/utils";
 
 const OrdersPage = async ({ params }: { params: { storeId: string } }) => {
+  // TODO, move request to db to separate component and add Loading state
   const orders =
     (await prismadb.order.findMany({
       where: { storeId: params.storeId },

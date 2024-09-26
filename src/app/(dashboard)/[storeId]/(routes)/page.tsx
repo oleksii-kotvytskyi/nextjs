@@ -14,6 +14,7 @@ interface DashboardProps {
 }
 
 const DashboardPage = async ({ params }: DashboardProps) => {
+  // TODO, move requests to db to separate component and add Loading state
   const totalRevenue = await getTotalRevenue(params.storeId);
   const salesCount = await getSalesCount(params.storeId);
   const stockCount = await getStockCount(params.storeId);

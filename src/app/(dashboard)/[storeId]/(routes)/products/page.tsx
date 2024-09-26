@@ -6,6 +6,7 @@ import { ProductColumn } from "./components/columns";
 import { formatter } from "@/lib/utils";
 
 const Products = async ({ params }: { params: { storeId: string } }) => {
+  // TODO, move request to db to separate component and add Loading state
   const products = await prismadb.product.findMany({
     where: { storeId: params.storeId },
     include: {

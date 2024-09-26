@@ -60,6 +60,7 @@ const ColorsForm = ({ initialData }: ColorsFormProps) => {
   const onDelete = async () => {
     try {
       setLoading(true);
+      // TODO
       await axios.delete(`/api/${params.storeId}/colors/${params.colorId}`);
       router.push(`/${params.storeId}/colors`);
       router.refresh();

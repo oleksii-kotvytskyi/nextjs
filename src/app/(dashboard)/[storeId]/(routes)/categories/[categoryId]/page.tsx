@@ -11,7 +11,7 @@ const CategoryPage = async ({
       id: params.categoryId,
     },
   });
-
+  // TODO, move request to db to separate component and add Loading state
   const billboards = await prismadb.billboard.findMany({
     where: {
       storeId: params.storeId,

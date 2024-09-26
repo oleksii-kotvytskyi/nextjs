@@ -14,19 +14,19 @@ const ProductPage = async ({
       images: true,
     },
   });
-
+  // TODO, move request to db to separate component and add Loading state
   const categories = await prismadb.category.findMany({
     where: {
       storeId: params.storeId,
     },
   });
-
+  // TODO, move request to db to separate component and add Loading state
   const sizes = await prismadb.size.findMany({
     where: {
       storeId: params.storeId,
     },
   });
-
+  // TODO, move request to db to separate component and add Loading state
   const colors = await prismadb.color.findMany({
     where: {
       storeId: params.storeId,
